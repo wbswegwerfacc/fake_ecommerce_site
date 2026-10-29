@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { formatPrice } from '@/utils/formatters';
+import { formatPrice } from '@/utils';
 import CartControls from './CartControls';
 
 export default function ProductCard({ product }) {

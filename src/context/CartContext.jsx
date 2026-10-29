@@ -8,7 +8,7 @@ import {
   clearProductFromCart,
   getItemQuantity,
   calculateCartTotals,
-} from '@/utils/cart';
+} from '@/utils';
 
 const CartContext = createContext(null);
 

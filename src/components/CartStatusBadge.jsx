@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { useCart } from '@/context/CartContext';
-import { formatPrice } from '@/utils/formatters';
+import { useCart } from '@/context';
+import { formatPrice } from '@/utils';
 
 export default function CartStatusBadge() {
   const { totalItems, totalCost, isHydrated } = useCart();

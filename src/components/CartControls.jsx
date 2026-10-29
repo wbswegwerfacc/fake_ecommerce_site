@@ -1,6 +1,6 @@
 'use client';
 
-import { useCart } from '@/context/CartContext';
+import { useCart } from '@/context';
 
 export default function CartControls({ product }) {
   const { getQuantity, addToCart, removeFromCart, isHydrated } = useCart();

@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { fetchCategories, fetchAllProducts } from '@/utils/api';
-import ProductCard from '@/components/ProductCard';
+import { fetchCategories, fetchAllProducts } from '@/utils';
+import { ProductCard } from '@/components';
 
 export default async function HomePage() {
   const [categories, products] = await Promise.all([

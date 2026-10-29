@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { fetchProductsByCategory, fetchCategories } from '@/utils/api';
-import ProductCard from '@/components/ProductCard';
+import { notFound } from 'next/navigation';
+import { fetchProductsByCategory, fetchCategories } from '@/utils';
+import { ProductCard } from '@/components';
 
 export default async function CategoryPage({ params }) {
   const resolvedParams = await params;
@@ -10,6 +11,10 @@ export default async function CategoryPage({ params }) {
     fetchProductsByCategory(decodedCategory),
     fetchCategories(),
   ]);
+
+  if (!allCategories.includes(decodedCategory)) {
+    notFound();
+  }
 
   return (
     <div>

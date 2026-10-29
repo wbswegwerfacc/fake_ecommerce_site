@@ -1,6 +1,6 @@
 import './globals.css';
-import { CartProvider } from '@/context/CartContext';
-import Navbar from '@/components/Navbar';
+import { CartProvider } from '@/context';
+import { Navbar } from '@/components';
 
 export const metadata = {
   title: 'FakeStore eCommerce | Next.js App Router',
